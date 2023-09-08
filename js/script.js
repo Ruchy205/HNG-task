@@ -1,16 +1,8 @@
 // Function to get the UTC time in hours, minutes and seconds
 function currentTime() {
-    const now = new Date();
-  
-    const hours = now.getUTCHours();
-    const minutes = now.getUTCMinutes();
-    const seconds = now.getUTCSeconds();
-  
-    const timeString = `${hours.toString().padStart(2, "0")}:${minutes
-      .toString()
-      .padStart(2, "0")}:${seconds.toString().padStart(2, "0")} UTC`;
-  
-    document.getElementById("time").innerText = timeString;
+  const timeInMilliSeconds = new Date().getTime();
+
+  document.getElementById("time").innerText = timeInMilliSeconds;
   }
   
   //       Function to get the day of the week
